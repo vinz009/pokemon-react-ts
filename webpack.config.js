@@ -28,7 +28,7 @@ const config = {
         test: /\.m?js$/,
 	exclude: /(node_modules)/,
 	use: {
-		loader: "swc-loader"
+		loader: "swc-loader",
 	}
       },
       {
