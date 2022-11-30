@@ -25,8 +25,11 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/i,
-        loader: "babel-loader",
+        test: /\.m?js$/,
+	exclude: /(node_modules)/,
+	use: {
+		loader: "swc-loader"
+	}
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
